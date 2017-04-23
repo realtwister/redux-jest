@@ -3,7 +3,7 @@ const deepFreeze = require('deep-freeze');
 
 const actionTest = (description, actionCreator, data, type) => {
   it(description, () => {
-    expect(actionCreator(...data)).toEqual(type);
+    expect(actionCreator(data)).toEqual(type);
   });
 };
 
